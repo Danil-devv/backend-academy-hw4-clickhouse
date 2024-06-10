@@ -5,8 +5,8 @@ CREATE TABLE IF NOT EXISTS payments_for_parents
     date     Date,
     category String,
     purpose  String,
-    money    Int32,
-    ind      Int32
+    money    Int64,
+    ind      Int64
 ) ENGINE = ReplacingMergeTree(ind)
       ORDER BY (id, date, category);
 
